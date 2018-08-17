@@ -1,0 +1,34 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: www-workload-client
+  namespace: workload
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app : www-workload-client
+    spec:
+      containers:
+        - name: www-workload-client-container
+          image: mayadata/www-workloads
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: 
+  name: www-workload-client-service
+  namespace: workload
+spec:
+  type: NodePort
+  ports:
+  - name: www-workload-client
+    port: 80
+    protocol: TCP
+  selector:
+    app: www-workload-client  
