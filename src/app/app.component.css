@@ -1,0 +1,16 @@
+.textcolor{
+    color: white;
+}
+
+.btn-round {
+    border-radius: 30px;
+    width: 120px;
+    font-size: 12px;
+}
+
+.not-active {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    color: grey;
+  }
