@@ -10,8 +10,8 @@ import { map } from 'rxjs/operators';
 
 export class AppComponent {
   title = 'state';
-  private status:any;
-  private ok:any;
+  status:any;
+  ok:any;
 
   constructor(private http: HttpClient) { }
  
