@@ -1,4 +1,4 @@
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top my-3">
     <a href="https://openebs.io/" target="_blank" class="navbar-brand">
       <img src="assets/openebs-logo-mule.svg" style="width:132px;height:32px">
     </a>
@@ -50,137 +50,90 @@
     </div>
   </nav>
 
-  <div class="container-fluid" style="background-color: grey;">
-    <div class="row content">
-      <div class="col-sm-1 sidenav my-5"></div>
-      <div class="col-sm-10 my-5 text-left">
+
         <table class="table">
           <thead class="thead-dark">
             <tr>
-              <th>Application</th>
-              <th>Status</th>
-              <th>Configration</th>
+              <th width="25%">Workload</th>
+              <th width="25%">Status</th>
+              <th width="25%">Version</th>
+              <th width="25%">Configration</th>
             </tr>
           </thead>
           <tbody class="table-light">
             <tr>
-              <td><a href="https://mongojiva.test.openebs.io/" target="_blank" >Mongo.jiva.1</a></td>
+              <td><img src="assets/mong.png" class="mt-3" style="height:50px;width:70px"><a href="https://mongojiva.test.openebs.io/" target="_blank" ><br>MongoDB</a></td>
               <td>
-                <button type="button" class="btn btn-round btn-success">
-                <i class="fa fa-circle-o-notch fa-spin" style="font-size:14px"></i> Success
-              </button>
+              <div [ngSwitch]="status">
+                <div *ngSwitchCase="'Running'">
+                    <button type="button" class="btn btn-round btn-success my-4">
+                      <i class="fa fa-circle-o-notch fa-spin mr-1" style="font-size:18px"></i>Running
+                    </button>
+                </div>
+                <div *ngSwitchCase="'Failed'">
+                    <button type="button" class="btn btn-round btn-danger my-4">
+                      <i class="fa fa-exclamation-triangle mr-1" style="font-size:18px"></i>Down
+                    </button>
+                  </div>
+                <div *ngSwitchDefault>
+                    <button type="button" class="btn btn-round btn-basic my-4">
+                        <i class="fa fa-clock-o mr-1" style="font-size:18px"></i>Unknown
+                    </button>
+                </div>
+              </div>
               </td>
-              <td>It's Completely Updated</td>
-            </tr>
-            <tr>
-              <td><a href="#" class="not-active">Mongo.jiva.1</a></td>
-              <td>
-                <button type="button" class="btn btn-round btn-primary">
-                <i class="fa fa-circle-o-notch fa-spin" style="font-size:14px"></i> Running
-              </button>
-              </td>
-              <td>In Development Phase</td>
-            </tr>
-            <tr>
-              <td><a href="#" class="not-active">Mongo.jiva.1</a></td>
-              <td>
-                <button type="button" class="btn btn-round btn-primary">
-                <i class="fa fa-circle-o-notch fa-spin" style="font-size:14px"></i> Running
-              </button>
-              </td>
-              <td>In Development Phase</td>
-            </tr>
-            <tr>
-              <td><a href="#" class="not-active">Mongo.jiva.1</a></td>
-              <td>
-                <button type="button" class="btn btn-round btn-primary">
-                  <i class="fa fa-circle-o-notch fa-spin" style="font-size:14px"></i> Running
-                </button>
-              </td>
-              <td>In Development Phase</td>
-            </tr>
-            <tr>
-              <td><a href="#" class="not-active">Mongo.jiva.1</a></td>
-              <td>
-                <button type="button" class="btn btn-round btn-primary">
-                <i class="fa fa-circle-o-notch fa-spin" style="font-size:14px"></i> Running
-              </button>
-              </td>
-              <td>In Development Phase</td>
-            </tr>
-            <tr>
-              <td><a href="#" class="not-active">Mongo.jiva.1</a></td>
-              <td>
-               <button type="button" class="btn btn-round btn-primary">
-                <i class="fa fa-circle-o-notch fa-spin" style="font-size:14px"></i> Running
-              </button>
-              </td>
-              <td>In Development Phase</td>
-            </tr>
-            <tr>
-              <td><a href="#" class="not-active">Mongo.jiva.1</a></td>
-              <td>
-                <button type="button" class="btn btn-round btn-primary">
-                <i class="fa fa-circle-o-notch fa-spin" style="font-size:14px"></i> Running
-              </button>
-              </td>
-              <td>In Development Phase</td>
+              <td><br>0.7</td>
+              <td><br>Application Replica : 2,<br>OpenEBS Replica : 1/application </td>
             </tr>
           </tbody>
-        </table>
-      </div>
-      <div class="col-sm-1 my-5 sidenav"></div>
-    </div>
-  </div>
+      </table>
 
   <div class="container-fluid" style="background-color: rgb(34, 34, 43)">
     <div class="jumbotron-fluid">
       <div class="row content">
-        <div class="col-sm-2"></div>
+        <div class="col-sm-2 my-5"></div>
 
-        <div class="col-sm-7">
+        <div class="col-sm-7 my-5">
           <table class="table table-borderless">
             <tbody class="textcolor">
               <tr>
-                <td>Events</td>
-                <td>Careers</td>
-                <td>About us</td>
+                <td><a href="https://openebs.io/events" class="text-white" target="_blank">Events</a></td>
+                <td><a href="https://openebs.io/careers" class="text-white" target="_blank">Careers</a></td>
+                <td><a href="https://github.com/openebs/" class="text-white" target="_blank">Github</a></td>
               </tr>
               <tr>
-                <td>Hackfests</td>
-                <td>FAQ</td>
-                <td>Litmus</td>
+                <td><a href="https://openebs.io/hackfests" class="text-white" target="_blank">Hackfests</a></td>
+                <td><a href="https://openebs.io/faq" class="text-white" target="_blank">FAQ</a></td>
+                <td><a href="https://slack.openebs.io/" class="text-white" target="_blank">Slack</a></td>
               </tr>
               <tr>
-                <td>Newsletters</td>
-                <td>Training</td>
-                <td>Hangouts</td>
+                <td><a href="https://openebs.io/hangout" class="text-white" target="_blank">Hangouts</a></td>
+                <td><a href="https://openebs.io/newsletter/" class="text-white" target="_blank">Newsletters</a></td>
+                <td><a href="https://blog.openebs.io/" class="text-white" target="_blank">Blogs</a></td>
               </tr>
               <tr>
-                <td>Releases</td>
-                <td>Videos</td>
-                <td>Twitter</td>
+                <td><a href="https://openebs.io/meetups" class="text-white" target="_blank">Meetup</a></td>
+                <td><a href="https://www.youtube.com/channel/UC3ywadaAUQ1FI4YsHZ8wa0g" class="text-white" target="_blank">Videos</a></td>
+                <td><a href="https://twitter.com/openebs" class="text-white" target="_blank">Twitter</a></td>
               </tr>
               <tr>
-                <td>Cafe</td>
-                <td>Docs</td>
-                <td>Github</td>
+                <td><a href="https://openebs.io/cafe" class="text-white" target="_blank">Cafe</a></td>
+                <td><a href="https://docs.openebs.io/" class="text-white" target="_blank">Docs</a></td>
+                <td><a href="https://openebs.io/litmus" class="text-white" target="_blank">Litmus</a></td>
               </tr>
               <tr>
-                <td>Blogs</td>
-                <td>Meetups</td>
-                <td>Stack</td>
+                <td><a href="https://www.katacoda.com/openebs/scenarios/openebs-intro" class="text-white" target="_blank">Training</a></td>
+                <td><a href="https://docs.openebs.io/docs/releasenotes.html" class="text-white" target="_blank">Releases</a></td>
+                <td><a href="https://www.mayadata.io/aboutus" class="text-white" target="_blank">About Us</a></td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div class="col-sm-2">
-        <img src="assets/openebs-logo.svg" style="width:122px;height:40px">
-        <img src="assets/mayaonline-beta.svg" style="width:142px;height:43px">
-        <img src="assets/mayadata-logo.svg" style="width:118px;height:35px">
+        <div class="col-sm-2 my-5">
+        <img src="assets/openebs-logo.svg" class="mt-4" style="width:122px;height:40px">
+        <img src="assets/mayaonline-beta.svg" class="mt-4" style="width:142px;height:43px">
+        <img src="assets/mayadata-logo.svg" class="mt-4" style="width:118px;height:35px">
         </div>
       </div>
     </div>
   </div>
-
-
