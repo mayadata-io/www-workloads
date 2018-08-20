@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - name: www-workload-client-container
-          image: mayadata/www-workloads:db7eb3
+          image: mayadata/www-workloads:8cd08c
           imagePullPolicy: Always
           ports:
           - containerPort: 80
