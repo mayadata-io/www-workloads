@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GithubService } from '../http/githubapi/github.service'
 
 @Component({
   selector: 'app-header',
@@ -6,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor() { }
+ private starCount
+  constructor(private githubStar:GithubService) { }
 
   ngOnInit() {
  
+    this.githubStar.getTotalStargazers().subscribe( res => {
+      this.starCount= res.stargazers_count;
+    });
   }
 
 }
