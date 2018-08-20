@@ -7,7 +7,7 @@ import { GithubService } from '../http/githubapi/github.service'
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
- private starCount
+  public starCount
   constructor(private githubStar:GithubService) { }
 
   ngOnInit() {
