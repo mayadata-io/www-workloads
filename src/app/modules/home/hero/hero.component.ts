@@ -6,7 +6,7 @@ import { Component, OnInit,Input } from '@angular/core';
   styleUrls: ['./hero.component.scss']
 })
 export class HeroComponent implements OnInit {
-  @Input('heroText') heroContent: string;
+  @Input('heroText') heroContent: any;
   constructor() { }
 
   ngOnInit() {
