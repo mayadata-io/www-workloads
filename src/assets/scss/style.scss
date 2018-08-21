@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-  body {
+body {
     font-family: 'Montserrat', sans-serif;
   }
   
@@ -61,17 +61,12 @@
   
   ul {
     list-style-type: none;
-    color: white;
     padding: 0;
   }
   
-  a {
-    color: #fff;
-  }
-  
+
   a:hover {
     text-decoration: none;
-    color: #fff;
   }
   
   p,
@@ -258,6 +253,12 @@
   
   /*Margin define end*/
   
+  /* mouse cursor*/
+  .pointer-cursor{
+    cursor: pointer;
+  }
+
+
   /*circle and text under box*/
   
   .circle-under-text {
@@ -279,54 +280,7 @@
   
   /* end of global css */
   
-  /*openebs header start */
-  
-  .ebs-header {
-    /* background-color: #414141; */
-  }
-  
-  .ebs-header img {
-    height: 2rem;
-    width: auto;
-  }
-  
-  .ebs-header ul {
-    display: flex;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-  
-  .ebs-header a {
-    color: #424424;
-  }
-  
-  .ebs-header li:hover {
-    text-decoration: underline;
-  }
-  
-  .ebs-header-nav {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-  
-  /* .social-top {
-    align-items: center;
-  } */
-  
-  @media screen and (max-width:767px) {
-    .ebs-header img {
-      height: 1.5rem;
-      width: auto;
-    }
-    .social-top {
-      align-items: left;
-    }
-    .navbar {
-      padding: 0;
-    }
-  }
-  
+
   /*OpenEBS header end */
     
   /* OpneEBS footer  start*/
@@ -406,9 +360,16 @@
   
   /*Banners */
   .banner{
-    min-height: 30px;
+    max-height: 58px;
     font-size: 15px;
+    display: flex;
+    align-items: center;
   }
   .banner a{
     text-decoration: underline;
   }
+  .banner .content{
+   font-size: 16px;
+   padding: 15px 0;
+  }
+ 

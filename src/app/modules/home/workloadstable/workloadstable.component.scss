@@ -1,0 +1,29 @@
+.openebs-build-last-update {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+}
+
+.workloads {
+    li {
+        width: 20%;
+        text-align: center;
+    }
+    .workload-table-header {
+        background-color: #212529;
+        li {
+            color: white;
+        }
+        ul {
+            margin-bottom: 0;
+            padding-top: 0.3rem;
+            padding-bottom: 0.3rem;
+        }
+    }
+    .Workload-table-content {
+        margin-top: 0.7rem;
+        margin-bottom: 0.7rem;
+        .workloads-img {
+            height: 30px;
+        }
+    }
+}

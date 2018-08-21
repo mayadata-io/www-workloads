@@ -6,14 +6,22 @@ import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 
 
-import { GithubService } from './core/http/githubapi/github.service'
+import { GithubService } from './core/http/githubapi/github.service';
+import { BannerComponent } from './shared/components/banner/banner.component';
+import { HomeComponent } from './modules/home/home.component';
+import { HeroComponent } from './modules/home/hero/hero.component';
+import { WorkloadstableComponent } from './modules/home/workloadstable/workloadstable.component'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BannerComponent,
+    HomeComponent,
+    HeroComponent,
+    WorkloadstableComponent
   ],
   imports: [
     HttpClientModule,
