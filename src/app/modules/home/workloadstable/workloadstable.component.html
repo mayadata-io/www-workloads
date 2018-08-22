@@ -34,11 +34,11 @@
             <li>StatefulSet - 2 replicas </li>
             <li>jiva</li>
             <li>1 replica per pv</li>
-            <li><i class="far " [ngClass]="{
-              'fa-check-circle':status == 'Running',
-              'text-success':status == 'Running',
+            <li><i class="fas" [ngClass]="{
+              'fa-check':status === 'Running',
+              'text-success':status === 'Running',    
               'fa-times ':status === 'Pending' || status === 'Failed',
-              'fa-exclamation-circle ':status === 'Unknown',
+              'fa-exclamation-triangle ':status === 'Unknown',
               'text-danger ':status === 'Pending' || status === 'Failed',
               'text-warning ':status === 'Unknown'
             }" ></i> {{status}}
