@@ -4,6 +4,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 import { GithubService } from './core/http/githubapi/github.service';
@@ -25,7 +26,8 @@ import { WorkloadstableComponent } from './modules/home/workloadstable/workloads
   ],
   imports: [
     HttpClientModule,
-    BrowserModule
+    BrowserModule,
+    NgbModule.forRoot()
   ],
   providers: [
     HttpClient,

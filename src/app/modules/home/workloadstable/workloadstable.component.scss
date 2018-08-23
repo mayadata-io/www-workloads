@@ -15,15 +15,18 @@
         }
         ul {
             margin-bottom: 0;
-            padding-top: 0.3rem;
-            padding-bottom: 0.3rem;
+            padding-top: 8px;
+            padding-bottom: 8px;
         }
     }
     .Workload-table-content {
-        margin-top: 0.7rem;
-        margin-bottom: 0.7rem;
+        margin-top: 15px;
+        margin-bottom: 15px;
         .workloads-img {
             height: 30px;
+        }
+        ul{
+            margin-bottom: 0;
         }
     }
 }
