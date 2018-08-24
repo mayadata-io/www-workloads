@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgwWowModule } from 'ngx-wow';
+import { RouterModule, RouterLinkActive } from '@angular/router';
 
 
 import { GithubService } from './core/http/githubapi/github.service';
@@ -27,7 +29,12 @@ import { WorkloadstableComponent } from './modules/home/workloadstable/workloads
   imports: [
     HttpClientModule,
     BrowserModule,
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    NgwWowModule.forRoot(),
+    RouterModule.forRoot([
+      {path:'',component:HeroComponent}
+    ])
+  
   ],
   providers: [
     HttpClient,
