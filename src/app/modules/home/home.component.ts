@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
     heroText: "Workload Summary Dashboard",
     subText: [
        "Summary dashboard of stateful",
-       "Workloads runnig in openEBS volumes"
+       "Workloads running in openEBS volumes"
     ]
   };
   constructor() { }
