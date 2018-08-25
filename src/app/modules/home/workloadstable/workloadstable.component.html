@@ -1,0 +1,133 @@
+<div class="openebs-build-last-update">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-between">
+        <p>OpenEBS 0.6</p>
+        <!-- <p>Last Update: 10 minutes ago </p> -->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="workloads">
+  <div class="workload-table-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="d-flex align-items-center">
+            <li>Stateful Workload</li>
+            <li>Workload Configuration</li>
+            <li>OpenEBS Engine</li>
+            <li>OpenEBS Configuration</li>
+            <li>Status</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Workload-table-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="d-flex align-items-center">
+            <li>
+              <img class="workloads-img" src="assets/images/mongo.png" alt=""> MongoDB 3.0</li>
+            <li>StatefulSet - 2 replicas </li>
+            <li>jiva</li>
+            <li>1 replica per pv</li>
+            <li><i class="fas" [ngClass]="{
+              'fa-check':status === 'Running',
+              'text-success':status === 'Running',    
+              'fa-times ':status === 'Pending' || status === 'Failed',
+              'fa-exclamation-triangle ':status === 'Unknown',
+              'text-danger ':status === 'Pending' || status === 'Failed',
+              'text-warning ':status === 'Unknown'
+            }" ></i> {{status}}
+              <a href="https://mongojiva.test.openebs.io">Dashboard</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <th width="25%">Workload</th>
+            <th width="25%">Status</th>
+            <th width="25%">Version</th>
+            <th width="25%">Configration</th>
+          </div>
+        </div>
+      </div>
+    </tr>
+
+  </thead>
+  <tbody class="table-light">
+    <tr>
+      <td>
+        <img src="assets/images/mong.png" class="mt-3" style="height:50px;width:70px">
+        <a href="https://mongojiva.test.openebs.io/" target="_blank">
+          <br>MongoDB</a>
+      </td>
+      <td>
+        <div [ngSwitch]="status">
+          <div *ngSwitchCase="'Running'">
+            <button type="button" class="btn btn-round btn-success my-4">
+              <i class="mr-1" style="font-size:18px"></i>Running
+            </button>
+          </div>
+          <div *ngSwitchCase="'Failed'">
+            <button type="button" class="btn btn-round btn-danger my-4">
+              <i class="fa fa-exclamation-triangle mr-1" style="font-size:18px"></i>Down
+            </button>
+          </div>
+          <div *ngSwitchDefault>
+            <button type="button" class="btn btn-round btn-basic my-4">
+              <i class="fa fa-clock-o mr-1" style="font-size:18px"></i>Unknown
+            </button>
+          </div>
+        </div>
+      </td>
+      <td>
+        <br>0.7</td>
+      <td>
+        <br>Application Replica : 2,
+        <br>OpenEBS Replica : 1/application </td>
+    </tr>
+  </tbody>
+</table> -->

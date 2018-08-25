@@ -1,29 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { map } from 'rxjs/operators';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 
 export class AppComponent {
-  title = 'state';
-  status:any;
-  ok:any;
-
   constructor(private http: HttpClient) { }
- 
+  public bannerPassMessage = "MayaData announces commercial availability and launches MDAP.";
+  public bannerHyperLink = "https://mayadata.io";
+  public bannerAnchorText = "Read More"
   ngOnInit() {
-    return this.http.get('https://mongojiva.test.openebs.io/api/pod/status')
-    .subscribe(data =>{
-      console.log(data)
-      this.ok= data;
-      this.status = this.ok.status;
-      console.log(this.ok.status)
-    });
-
-
   }
 }
