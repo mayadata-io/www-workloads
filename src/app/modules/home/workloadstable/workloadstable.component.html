@@ -8,7 +8,8 @@
     </div>
   </div>
 </div>
-<div class="workloads">
+
+<!-- <div class="workloads">
   <div class="workload-table-header">
     <div class="container">
       <div class="row">
@@ -49,9 +50,41 @@
       </div>
     </div>
   </div>
+</div> -->
+
+<div class="workloads">
+  <div class="workload-table-header">
+    <div class="container">
+      <div style="overflow-x:auto;">
+        <table>
+          <tr style="background-color: #f7f7f7;">
+            <td>Stateful Workload</td>
+            <td>Workload Configuration</td>
+            <td>OpenEBS Engine</td>
+            <td>OpenEBS Configuration</td>
+            <td>Status</td>
+          </tr>
+          <tr>
+            <td><img class="workloads-img" src="assets/images/mongo.png" alt="">MongoDB 3.0</td>
+            <td>StatefulSet-2 replicas </td>
+            <td>jiva</td>
+            <td>1 replica per pv</td>
+            <td><i class="fas" [ngClass]="{
+              'fa-check':status === 'Running',
+              'text-success':status === 'Running',    
+              'fa-times ':status === 'Pending' || status === 'Failed',
+              'fa-exclamation-triangle ':status === 'Unknown',
+              'text-danger ':status === 'Pending' || status === 'Failed',
+              'text-warning ':status === 'Unknown'
+            }" ></i> {{status}}
+            <a href="https://mongojiva.test.openebs.io">Dashboard</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
 </div>
-
-
 
 
 

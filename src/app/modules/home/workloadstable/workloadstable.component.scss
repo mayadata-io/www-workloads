@@ -3,30 +3,54 @@
     margin-bottom: 1rem;
 }
 
+// .workloads {
+//     li {
+//         width: 20%;
+//         text-align: center;
+//     }
+//     .workload-table-header {
+//         background-color: #f7f7f7;
+//         li {
+//             color: #848484;
+//         }
+//         ul {
+//             margin-bottom: 0;
+//             padding-top: 8px;
+//             padding-bottom: 8px;
+//         }
+//     }
+    // .Workload-table-content {
+    //     margin-top: 15px;
+    //     margin-bottom: 15px;
+    //     .workloads-img {
+    //         height: 30px;
+    //     }
+    //     ul{
+    //         margin-bottom: 0;
+    //     }
+    // }
+// }
+
 .workloads {
-    li {
-        width: 20%;
-        text-align: center;
+    .workloads-img {
+        width: 40px;
+        height: 30px;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
     }
     .workload-table-header {
-        background-color: #f7f7f7;
-        li {
+        td {
+            text-align: left;
+            padding: 8px;
             color: #848484;
         }
-        ul {
-            margin-bottom: 0;
-            padding-top: 8px;
-            padding-bottom: 8px;
-        }
-    }
-    .Workload-table-content {
-        margin-top: 15px;
-        margin-bottom: 15px;
-        .workloads-img {
-            height: 30px;
-        }
-        ul{
-            margin-bottom: 0;
+        tr {
+            text-align: left;
+            padding: 8px;
+
         }
     }
 }

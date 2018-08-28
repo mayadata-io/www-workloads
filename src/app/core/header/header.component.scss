@@ -17,7 +17,7 @@
   color: white;
 }
 .triangle-isosceles a,.star-div a{
-  color: black;
+  color: white;
 }
 
 .ebs-header-nav {
@@ -31,6 +31,26 @@
   padding-top: 0.25rem;
 }
 
+.heart {
+  color: white;
+  vertical-align: text-top;
+  font-size: 22px;
+  -webkit-transition: color 1s ease-out;
+  -moz-transition: color 1s ease-out;
+  -o-transition: color 1s ease-out;
+  transition: color 1s ease-out;
+
+  -webkit-transition: font-size 1s ease-out;
+  -moz-transition: font-size 1s ease-out;
+  -o-transition: font-size 1s ease-out;
+  transition: font-size 1s ease-out;
+}
+
+.heart:hover {
+  color: red;
+  font-size: 25px;
+  cursor: pointer;
+}
 
 .pre-star-div .star-div .triangle-isosceles a:hover,
 .pre-star-div .star-div .triangle-isosceles a:focus {
@@ -61,7 +81,7 @@
     padding: 1rem 0rem;
     box-shadow: inset 1px 4px 5px -5px grey;
     align-items: left;
-    background-color: #f8f8f8;
+    background-color: black;
   }
   .mr-l-2 {
     margin-left: 2rem;
