@@ -1,6 +1,7 @@
 .footer{
     background-color:#616161;
     color:white;
+    margin-top: 5%;
 }
 .footer-details{
     background-color:#f7f7f7;
@@ -9,17 +10,17 @@
 
 .company-logos{
     .logo{
-    img{
-        height: 98%;
-        width: 15%;
-        background-color: white;
-        border-radius: 1.3rem;
-        padding: 0.2rem;
+        img{
+            height: 98%;
+            width: 15%;
+            background-color: white;
+            border-radius: 1.3rem;
+            padding: 0.2rem;
+        }
+        img:nth-child(1),img:nth-child(2),img:nth-child(3){
+            margin-right:0.8rem;
+        }
     }
-    img:nth-child(1),img:nth-child(2),img:nth-child(3){
-        margin-right:0.8rem;
-    }
-}
 }
 .social-icon{
     i{
