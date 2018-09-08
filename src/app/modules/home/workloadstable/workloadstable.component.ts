@@ -15,7 +15,7 @@ export class WorkloadstableComponent implements OnInit {
   ngOnInit() {
 
     timer(0, 10000).subscribe(x => {
-    return this.http.get('https://mongojiva.test.openebs.io/api/pod/status')
+    return this.http.get('https://mongojiva.openebs.ci/api/pod/status')
       .subscribe(data => {
         console.log(data)
         this.ok = data;
