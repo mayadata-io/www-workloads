@@ -29,9 +29,9 @@
             <td><i class="fas" [ngClass]="{
               'fa-check':mongoStatus === 'Running',
               'text-success':mongoStatus === 'Running',    
-              'fa-times ':mongoStatus === 'Pending' || status === 'Failed',
+              'fa-times ':mongoStatus === 'Pending' || mongoStatus === 'Failed',
               'fa-exclamation-triangle ':mongoStatus === 'Unknown',
-              'text-danger ':mongoStatus === 'Pending' || status === 'Failed',
+              'text-danger ':mongoStatus === 'Pending' || mongoStatus === 'Failed',
               'text-warning ':mongoStatus === 'Unknown'
             }" ></i> {{perconaStatus}}
             <a href="https://mongojiva.openebs.ci" target="blank">Dashboard</a>
@@ -45,9 +45,9 @@
             <td><i class="fas" [ngClass]="{
               'fa-check':perconaStatus === 'Running',
               'text-success':perconaStatus === 'Running',    
-              'fa-times ':perconaStatus === 'Pending' || status === 'Failed',
+              'fa-times ':perconaStatus === 'Pending' || perconaStatus === 'Failed',
               'fa-exclamation-triangle ':perconaStatus === 'Unknown',
-              'text-danger ':perconaStatus === 'Pending' || status === 'Failed',
+              'text-danger ':perconaStatus === 'Pending' || perconaStatus === 'Failed',
               'text-warning ':perconaStatus === 'Unknown'
             }" ></i> {{perconaStatus}}
             <a href="https://perconajiva.openebs.ci" target="blank">Dashboard</a>
