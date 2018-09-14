@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 d-flex justify-content-between">
-        <p>OpenEBS 0.6</p>
+        <p>OpenEBS 0.7.0-RC2</p>
         <!-- <p>Last Update: 10 minutes ago </p> -->
       </div>
     </div>
@@ -31,19 +31,44 @@
         <div class="col-md-12">
           <ul class="d-flex align-items-center">
             <li>
-              <img class="workloads-img" src="assets/images/mongo.png" alt=""> MongoDB 3.0</li>
-            <li>StatefulSet - 2 replicas </li>
+              <img class="workloads-img" src="assets/images/workloads-logos/mongo.svg" alt=""> MongoDB 3.0</li>
+            <li>StatefulSet - 3 replicas </li>
             <li>jiva</li>
-            <li>1 replica per pv</li>
+            <li>3 replica per pv</li>
             <li><i class="fas" [ngClass]="{
-              'fa-check':status === 'Running',
-              'text-success':status === 'Running',    
-              'fa-times ':status === 'Pending' || status === 'Failed',
-              'fa-exclamation-triangle ':status === 'Unknown',
-              'text-danger ':status === 'Pending' || status === 'Failed',
-              'text-warning ':status === 'Unknown'
-            }" ></i> {{status}}
-              <a href="https://mongojiva.test.openebs.io">Dashboard</a>
+              'fa-check':mongoStatus === 'Running',
+              'text-success':mongoStatus === 'Running',    
+              'fa-times ':mongoStatus === 'Pending' || status === 'Failed',
+              'fa-exclamation-triangle ':mongoStatus === 'Unknown',
+              'text-danger ':mongoStatus === 'Pending' || status === 'Failed',
+              'text-warning ':mongoStatus === 'Unknown'
+            }" ></i> {{mongoStatus}}
+              <a href="https://mongojiva.openebs.ci" target="blank">Dashboard</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="Workload-table-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="d-flex align-items-center">
+            <li>
+              <img class="workloads-img" src="assets/images/workloads-logos/percona.svg" alt=""> Percona Latest</li>
+            <li>Deployment - 1 replicas </li>
+            <li>jiva</li>
+            <li>3 replica per pv</li>
+            <li><i class="fas" [ngClass]="{
+              'fa-check':perconaStatus === 'Running',
+              'text-success':perconaStatus === 'Running',    
+              'fa-times ':perconaStatus === 'Pending' || status === 'Failed',
+              'fa-exclamation-triangle ':perconaStatus === 'Unknown',
+              'text-danger ':perconaStatus === 'Pending' || status === 'Failed',
+              'text-warning ':perconaStatus === 'Unknown'
+            }" ></i> {{perconaStatus}}
+              <a href="https://perconajiva.openebs.ci" target="blank">Dashboard</a>
             </li>
           </ul>
         </div>

@@ -7,15 +7,15 @@ metadata:
    nginx.ingress.kubernetes.io/rewrite-target: /
    kubernetes.io/tls-acme: "true"
 spec:
-  tls:
-  - hosts:
-    - workloads.openebs.io
-    secretName: workload-ingress
-  rules:
-  - host: workloads.openebs.io
-    http:
-      paths:
-      - path: /
-        backend:
-          serviceName: www-workload-client-service
-          servicePort: 80
+ tls:
+ - hosts:
+   - workloads.openebs.ci
+   secretName: workload-ingress
+ rules:
+ - host: workloads.openebs.ci
+   http:
+     paths:
+     - path: /
+       backend:
+         serviceName: www-workload-client-service
+         servicePort: 80
