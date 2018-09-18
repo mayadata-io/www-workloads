@@ -12,6 +12,10 @@ export class WorkloadstableComponent implements OnInit {
   mongoOk: any;
   perconaStatus: any;
   perconaOk: any;
+  mongocstorStatus: any;
+  mongocstorOk: any;
+  perconacstorStatus: any;
+  perconacstorOk: any;
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
@@ -32,5 +36,22 @@ export class WorkloadstableComponent implements OnInit {
         this.perconaStatus = this.perconaOk.status;
       });
   });
+  timer(0, 10000).subscribe(x => {
+    return this.http.get('https://mongocstor.openebs.ci/api/pod/status')
+      .subscribe(data => {
+        console.log(data)
+        this.mongocstorOk = data;
+        this.mongocstorStatus = this.mongocstorOk.status;
+      });
+  });
+  timer(0, 10000).subscribe(x => {
+    return this.http.get('https://perconacstor.openebs.ci/api/pod/status')
+      .subscribe(data => {
+        console.log(data)
+        this.perconacstorOk = data;
+        this.perconacstorStatus = this.perconacstorOk.status;
+      });
+  });
+
 }
 }
