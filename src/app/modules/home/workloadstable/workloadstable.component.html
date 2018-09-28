@@ -117,6 +117,22 @@
             <a href="https://prometheus-dashboard.openebs.ci/" target="_blank">Dashboard</a>
             </td>
           </tr>
+          <tr>
+            <td><img class="workloads-img" src="assets/images/workloads-logos/wordpress.png" alt="">Wordpress-jiva</td>
+            <td>Deployment-1 replicas </td>
+            <td>jiva</td>
+            <td>3 replica per pv</td>
+            <td><i class="fas" [ngClass]="{
+              'fa-check':perconaStatus === 'Running',
+              'text-success':perconaStatus === 'Running',    
+              'fa-times ':perconaStatus === 'Pending' || perconaStatus === 'Failed',
+              'fa-exclamation-triangle ':perconaStatus === 'Unknown',
+              'text-danger ':perconaStatus === 'Pending' || perconaStatus === 'Failed',
+              'text-warning ':perconaStatus === 'Unknown'
+            }" ></i> {{perconaStatus}}
+            <a href="https://wordpressjiva.openebs.ci/" target="_blank">Dashboard</a>
+            </td>
+          </tr>
         </table>
       </div>
     </div>
