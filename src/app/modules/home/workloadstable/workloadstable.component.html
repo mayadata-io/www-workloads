@@ -107,14 +107,14 @@
             <td>cstor</td>
             <td>3 replica per pv</td>
             <td><i class="fas" [ngClass]="{
-              'fa-check':perconaStatus === 'Running',
-              'text-success':perconaStatus === 'Running',    
-              'fa-times ':perconaStatus === 'Pending' || perconaStatus === 'Failed',
-              'fa-exclamation-triangle ':perconaStatus === 'Unknown',
-              'text-danger ':perconaStatus === 'Pending' || perconaStatus === 'Failed',
-              'text-warning ':perconaStatus === 'Unknown'
+              'fa-check':prometheusStatus === 'Running',
+              'text-success':prometheusStatus === 'Running',    
+              'fa-times ':prometheusStatus === 'Pending' || prometheusStatus === 'Failed',
+              'fa-exclamation-triangle ':prometheusStatus === 'Unknown',
+              'text-danger ':prometheusStatus === 'Pending' || prometheusStatus === 'Failed',
+              'text-warning ':prometheusStatus === 'Unknown'
             }" ></i> {{perconaStatus}}
-            <a href="https://prometheus-dashboard.openebs.ci/" target="_blank">Dashboard</a>
+            <a href="https://prometheus.openebs.ci/" target="_blank">Dashboard</a>
             </td>
           </tr>
           <tr>

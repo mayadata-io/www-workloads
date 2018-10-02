@@ -16,6 +16,8 @@ export class WorkloadstableComponent implements OnInit {
   mongocstorOk: any;
   perconacstorStatus: any;
   perconacstorOk: any;
+  prometheusStatus: any;
+  prometheusOk: any;
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
@@ -52,6 +54,13 @@ export class WorkloadstableComponent implements OnInit {
         this.perconacstorStatus = this.perconacstorOk.status;
       });
   });
-
+  timer(0, 10000).subscribe(x => {
+    return this.http.get('https://prometheus.openebs.ci/api/pod/status')
+      .subscribe(data => {
+        console.log(data)
+        this.prometheusOk = data;
+        this.prometheusStatus = this.prometheusOk.status;
+      });
+  });
 }
 }
