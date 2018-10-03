@@ -91,14 +91,14 @@
             <td>cstor</td>
             <td>3 replica per pv</td>
             <td><i class="fas" [ngClass]="{
-              'fa-check':perconaStatus === 'Running',
-              'text-success':perconaStatus === 'Running',    
-              'fa-times ':perconaStatus === 'Pending' || perconaStatus === 'Failed',
-              'fa-exclamation-triangle ':perconaStatus === 'Unknown',
-              'text-danger ':perconaStatus === 'Pending' || perconaStatus === 'Failed',
-              'text-warning ':perconaStatus === 'Unknown'
+              'fa-check':grafanaStatus === 'Running',
+              'text-success':grafanaStatus === 'Running',    
+              'fa-times ':grafanaStatus === 'Pending' || grafanaStatus === 'Failed',
+              'fa-exclamation-triangle ':grafanaStatus === 'Unknown',
+              'text-danger ':grafanaStatus === 'Pending' || grafanaStatus === 'Failed',
+              'text-warning ':grafanaStatus === 'Unknown'
             }" ></i> {{perconaStatus}}
-            <a href="https://grafana-dashboard.openebs.ci/" target="_blank">Dashboard</a>
+            <a href="https://grafana.openebs.ci/" target="_blank">Dashboard</a>
             </td>
           </tr>
           <tr>
