@@ -1,0 +1,235 @@
+<div class="openebs-build-last-update">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 d-flex justify-content-between">
+        <p>OpenEBS 0.7.0</p>
+        <!-- <p>Last Update: 10 minutes ago </p> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="workloads">
+  <div class="workload-table-header">
+    <div class="container">
+      <div style="overflow-x:auto;">
+        <table>
+          <tr style="background-color: #f7f7f7;">
+            <td>Stateful Workload</td>
+            <td>Workload Configuration</td>
+            <td>OpenEBS Engine</td>
+            <td>OpenEBS Configuration</td>
+            <td>Status</td>
+          </tr>
+          <tr>
+              <td><img class="workloads-img" src="assets/images/workloads-logos/mongo.svg" alt="">MongoDB</td>
+              <td>StatefulSet-3 replicas </td>
+              <td>cstor</td>
+              <td>3 replica per pv</td>
+              <td><i class="fas" [ngClass]="{
+                'fa-check':mongocstorStatus === 'Running',
+                'text-success':mongocstorStatus === 'Running',    
+                'fa-times ':mongocstorStatus === 'Pending' || mongocstorStatus === 'Failed',
+                'fa-exclamation-triangle ':mongoStatus === 'Unknown',
+                'text-danger ':mongocstorStatus === 'Pending' || mongocstorStatus === 'Failed',
+                'text-warning ':mongocstorStatus === 'Unknown'
+              }" ></i> {{perconaStatus}}
+              <a href="https://mongocstor.openebs.ci" target="_blank">Dashboard</a>
+              </td>
+            </tr>
+            <tr>
+              <td><img class="workloads-img" src="assets/images/workloads-logos/percona.svg" alt="">Percona</td>
+              <td>Deployment-1 replicas </td>
+              <td>cstor</td>
+              <td>3 replica per pv</td>
+              <td><i class="fas" [ngClass]="{
+                'fa-check':perconacstorStatus === 'Running',
+                'text-success':perconacstorStatus === 'Running',    
+                'fa-times ':perconacstorStatus === 'Pending' || perconacstorStatus === 'Failed',
+                'fa-exclamation-triangle ':perconacstorStatus === 'Unknown',
+                'text-danger ':perconacstorStatus === 'Pending' || perconacstorStatus === 'Failed',
+                'text-warning ':perconacstorStatus === 'Unknown'
+              }" ></i> {{perconaStatus}}
+              <a href="https://perconacstor.openebs.ci" target="_blank">Dashboard</a>
+              </td>
+            </tr>
+          <tr>
+            <td><img class="workloads-img" src="assets/images/workloads-logos/mongo.svg" alt="">MongoDB</td>
+            <td>StatefulSet-3 replicas </td>
+            <td>jiva</td>
+            <td>3 replica per pv</td>
+            <td><i class="fas" [ngClass]="{
+              'fa-check':mongoStatus === 'Running',
+              'text-success':mongoStatus === 'Running',    
+              'fa-times ':mongoStatus === 'Pending' || mongoStatus === 'Failed',
+              'fa-exclamation-triangle ':mongoStatus === 'Unknown',
+              'text-danger ':mongoStatus === 'Pending' || mongoStatus === 'Failed',
+              'text-warning ':mongoStatus === 'Unknown'
+            }" ></i> {{perconaStatus}}
+            <a href="https://mongojiva.openebs.ci" target="_blank">Dashboard</a>
+            </td>
+          </tr>
+          <tr>
+            <td><img class="workloads-img" src="assets/images/workloads-logos/percona.svg" alt="">Percona</td>
+            <td>Deployment-1 replicas </td>
+            <td>jiva</td>
+            <td>3 replica per pv</td>
+            <td><i class="fas" [ngClass]="{
+              'fa-check':perconaStatus === 'Running',
+              'text-success':perconaStatus === 'Running',    
+              'fa-times ':perconaStatus === 'Pending' || perconaStatus === 'Failed',
+              'fa-exclamation-triangle ':perconaStatus === 'Unknown',
+              'text-danger ':perconaStatus === 'Pending' || perconaStatus === 'Failed',
+              'text-warning ':perconaStatus === 'Unknown'
+            }" ></i> {{perconaStatus}}
+            <a href="https://perconajiva.openebs.ci" target="_blank">Dashboard</a>
+            </td>
+          </tr>
+          <tr>
+            <td><img class="workloads-img" src="assets/images/workloads-logos/grafana.png" alt="">Grafana</td>
+            <td>Deployment-1 replicas </td>
+            <td>cstor</td>
+            <td>3 replica per pv</td>
+            <td><i class="fas" [ngClass]="{
+              'fa-check':grafanaStatus === 'Running',
+              'text-success':grafanaStatus === 'Running',    
+              'fa-times ':grafanaStatus === 'Pending' || grafanaStatus === 'Failed',
+              'fa-exclamation-triangle ':grafanaStatus === 'Unknown',
+              'text-danger ':grafanaStatus === 'Pending' || grafanaStatus === 'Failed',
+              'text-warning ':grafanaStatus === 'Unknown'
+            }" ></i> {{perconaStatus}}
+            <a href="https://grafana.openebs.ci/" target="_blank">Dashboard</a>
+            </td>
+          </tr>
+          <tr>
+            <td><img class="workloads-img" src="assets/images/workloads-logos/prometheus.png" alt="">Prometheus</td>
+            <td>Deployment-1 replicas </td>
+            <td>cstor</td>
+            <td>3 replica per pv</td>
+            <td><i class="fas" [ngClass]="{
+              'fa-check':prometheusStatus === 'Running',
+              'text-success':prometheusStatus === 'Running',    
+              'fa-times ':prometheusStatus === 'Pending' || prometheusStatus === 'Failed',
+              'fa-exclamation-triangle ':prometheusStatus === 'Unknown',
+              'text-danger ':prometheusStatus === 'Pending' || prometheusStatus === 'Failed',
+              'text-warning ':prometheusStatus === 'Unknown'
+            }" ></i> {{perconaStatus}}
+            <a href="https://prometheus.openebs.ci/" target="_blank">Dashboard</a>
+            </td>
+          </tr>
+          <tr>
+            <td><img class="workloads-img" src="assets/images/workloads-logos/wordpress.png" alt="">Wordpress-jiva</td>
+            <td>Deployment-1 replicas </td>
+            <td>jiva</td>
+            <td>3 replica per pv</td>
+            <td><i class="fas" [ngClass]="{
+              'fa-check':perconaStatus === 'Running',
+              'text-success':perconaStatus === 'Running',    
+              'fa-times ':perconaStatus === 'Pending' || perconaStatus === 'Failed',
+              'fa-exclamation-triangle ':perconaStatus === 'Unknown',
+              'text-danger ':perconaStatus === 'Pending' || perconaStatus === 'Failed',
+              'text-warning ':perconaStatus === 'Unknown'
+            }" ></i> {{perconaStatus}}
+            <a href="https://wordpressjiva.openebs.ci/" target="_blank">Dashboard</a>
+            </td>
+          </tr>
+          <tr>
+            <td><img class="workloads-img" src="assets/images/workloads-logos/cockroachdb.svg" alt="">cockroachDb</td>
+            <td>Deployment-3 replicas </td>
+            <td>jiva</td>
+            <td>3 replica per pv</td>
+            <td><i class="fas" [ngClass]="{
+              'fa-check':cockroachStatus === 'Running',
+              'text-success':cockroachStatus === 'Running',    
+              'fa-times ':cockroachStatus === 'Pending' || cockroachStatus === 'Failed',
+              'fa-exclamation-triangle ':cockroachStatus === 'Unknown',
+              'text-danger ':cockroachStatus === 'Pending' || cockroachStatus === 'Failed',
+              'text-warning ':cockroachStatus === 'Unknown'
+            }" ></i> {{perconaStatus}}
+            <a href="https://cockroachjiva.openebs.ci/" target="_blank">Dashboard</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <th width="25%">Workload</th>
+            <th width="25%">Status</th>
+            <th width="25%">Version</th>
+            <th width="25%">Configration</th>
+          </div>
+        </div>
+      </div>
+    </tr>
+
+  </thead>
+  <tbody class="table-light">
+    <tr>
+      <td>
+        <img src="assets/images/mong.png" class="mt-3" style="height:50px;width:70px">
+        <a href="https://mongojiva.test.openebs.io/" target="_blank">
+          <br>MongoDB</a>
+      </td>
+      <td>
+        <div [ngSwitch]="status">
+          <div *ngSwitchCase="'Running'">
+            <button type="button" class="btn btn-round btn-success my-4">
+              <i class="mr-1" style="font-size:18px"></i>Running
+            </button>
+          </div>
+          <div *ngSwitchCase="'Failed'">
+            <button type="button" class="btn btn-round btn-danger my-4">
+              <i class="fa fa-exclamation-triangle mr-1" style="font-size:18px"></i>Down
+            </button>
+          </div>
+          <div *ngSwitchDefault>
+            <button type="button" class="btn btn-round btn-basic my-4">
+              <i class="fa fa-clock-o mr-1" style="font-size:18px"></i>Unknown
+            </button>
+          </div>
+        </div>
+      </td>
+      <td>
+        <br>0.7</td>
+      <td>
+        <br>Application Replica : 2,
+        <br>OpenEBS Replica : 1/application </td>
+    </tr>
+  </tbody>
+</table> -->
