@@ -20,6 +20,8 @@ export class WorkloadstableComponent implements OnInit {
   prometheusOk: any;
   grafanaStatus: any;
   grafanaOk: any;
+  cockroachStatus: any;
+  cockroachOk: any;
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
@@ -70,6 +72,14 @@ export class WorkloadstableComponent implements OnInit {
         console.log(data)
         this.grafanaOk = data;
         this.grafanaStatus = this.grafanaOk.status;
+      });
+  });
+  timer(0, 10000).subscribe(x => {
+    return this.http.get('https://cockroachjiva.openebs.ci/api/pod/status')
+      .subscribe(data => {
+        console.log(data)
+        this.cockroachOk = data;
+        this.cockroachStatus = this.cockroachOk.status;
       });
   });
 }
