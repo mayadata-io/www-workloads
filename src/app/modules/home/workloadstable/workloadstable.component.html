@@ -133,6 +133,22 @@
             <a href="https://wordpressjiva.openebs.ci/" target="_blank">Dashboard</a>
             </td>
           </tr>
+          <tr>
+            <td><img class="workloads-img" src="assets/images/workloads-logos/cockroachdb.svg" alt="">cockroachDb</td>
+            <td>Deployment-3 replicas </td>
+            <td>jiva</td>
+            <td>3 replica per pv</td>
+            <td><i class="fas" [ngClass]="{
+              'fa-check':cockroachStatus === 'Running',
+              'text-success':cockroachStatus === 'Running',    
+              'fa-times ':cockroachStatus === 'Pending' || cockroachStatus === 'Failed',
+              'fa-exclamation-triangle ':cockroachStatus === 'Unknown',
+              'text-danger ':cockroachStatus === 'Pending' || cockroachStatus === 'Failed',
+              'text-warning ':cockroachStatus === 'Unknown'
+            }" ></i> {{perconaStatus}}
+            <a href="https://cockroachjiva.openebs.ci/" target="_blank">Dashboard</a>
+            </td>
+          </tr>
         </table>
       </div>
     </div>
